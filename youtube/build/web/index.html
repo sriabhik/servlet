@@ -1,16 +1,80 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
+<html lang="en">
     <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Page</title>
+        <style>
+            .container{
+                width:40%;
+                border: 1px solid black;
+                margin : auto;
+                padding : 20px;
+                font-size: 25px;
+            }
+            #myform table tr td input{
+                font-size: 25px;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
-        <h1><a href = "myservlet">myservlet</a></h1>
+        <div class="container">
+            <h1>My Form</h1>
+            <form id = "myform" action = "RegisterServlet" method = "post">
+                <table>
+                    <tr>
+                        <td>Enter Name: </td>
+                        <td><input type ="text" name ="user_name" placeholder="Enter here"/></td>
+                    </tr>
+                    
+                     <tr>
+                        <td>Enter Password: </td>
+                        <td><input type ="password" name ="user_password" placeholder="Enter here"/></td>
+                    </tr>
+                    
+                     <tr>
+                        <td>Enter Email: </td>
+                        <td><input type ="email" name ="user_email" placeholder="Enter here"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Select Gender</td>
+                        <td><input type ="radio" name = "user_gender" value = "male">Male &nbsp;&nbsp;<input type ="radio" name = "user_gender" value = "Female"/>Female</td>  
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter Course
+                        </td>
+                        <td>
+                            <select name ="user_course">
+                            <option value ="java">java</option>
+                            <option value ="php">PHP</option>
+                            <option value ="python">Python</option>
+                            <option value ="Android">Android</option>
+                        </select>
+                            
+                        </td>  
+                    </tr>
+                       
+                    <tr>
+                     
+                        <td style = "position: relative;left : 85px;top:2px;">
+                         
+                            <input type = "checkbox" value = "checked" name = "condition"/>
+                        </td>
+                        <td>Agree terms and condition</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <button type = "submit">Register</button>
+                            <button type ="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div> 
+        
     </body>
 </html>
